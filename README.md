@@ -21,7 +21,7 @@ This project is a Django-based web application that provides CRUD (Create, Read,
 4. **Activate virtual environment:**
    ```bash
    source env/bin/activate  # On Unix/macOS
-   env\Scripts\activate    # On Windows
+   source env\Scripts\activate    # On Windows
 
 5. **Install dependencies:**
    ```bash
