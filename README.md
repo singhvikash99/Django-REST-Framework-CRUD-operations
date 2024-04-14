@@ -5,7 +5,7 @@ DRF-based project is a RESTful API for managing posts and comments, with user au
 
 1. **Clone the repository:**
    ```terminal
-   git clone https://github.com/singhvikash99/Django-CRUD-project-.git
+   git clone https://github.com/singhvikash99/Django-REST-Framework-CRUD-operations.git
 3. **Navigate to the Repository Directory:**
    ```terminal
    cd Django-CRUD-project-
