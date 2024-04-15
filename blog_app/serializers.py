@@ -1,15 +1,6 @@
 from rest_framework import serializers
 from .models import Post, Comment
 
-class PostSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ['title', 'content', 'author', 'published_date', 'likes']
-        read_only_fields = ['author', 'published_date', 'likes'] 
-
-    def create(self, validated_data):
-        validated_data['author'] = self.context['request'].user  
-        return super().create(validated_data)
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,3 +11,17 @@ class CommentSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         validated_data['author'] = self.context['request'].user 
         return super().create(validated_data)
+
+class PostSerializer(serializers.ModelSerializer):
+    comments = CommentSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Post
+        fields = ['title', 'content', 'author', 'published_date', 'likes', 'comments']
+        read_only_fields = ['author', 'published_date', 'likes'] 
+
+    def create(self, validated_data):
+        validated_data['author'] = self.context['request'].user  
+        return super().create(validated_data)
+
+

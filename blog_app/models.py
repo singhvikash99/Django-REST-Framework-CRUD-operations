@@ -21,7 +21,6 @@ class Comment(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     likes = models.IntegerField(default=0)
     liked_by = models.ManyToManyField(User, related_name='liked_comments', blank=True)
-
+    
     def __str__(self):
-        def __str__(self):
-            return f'{self.text[:50]}...'
+        return f'{self.text[:50]}...'
