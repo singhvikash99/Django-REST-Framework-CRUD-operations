@@ -53,8 +53,8 @@ To authenticate and obtain a JWT token, you can follow these steps:
 **Output:**
 
     {
-            "title": "test1",
-            "content": "testcontent",
+            "title": "post1",
+            "content": "postcontent1",
             "author": 2,
             "published_date": "2024-04-15T15:47:35.208689Z",
             "likes": 0,
@@ -97,6 +97,7 @@ To authenticate and obtain a JWT token, you can follow these steps:
         "author": 1,
         "published_date": "2024-04-14T04:56:08.508546Z",
         "likes": 0
+        "comments": []
     }
 #### Retrive Posts
 - **URL:** `/api/posts/<post_id>/`
@@ -110,11 +111,12 @@ To authenticate and obtain a JWT token, you can follow these steps:
 **Output:**
 
     {
-        "title": "First Post",
-        "content": "Content of the first post",
-        "author": "1",
-        "published_date": "2024-04-14T04:42:03.584415Z",
-        "likes": 0
+       "title": "testpost3",
+       "content": "testpost content3",
+       "author": 1,
+       "published_date": "2024-04-18T01:06:57.498070Z",
+       "likes": 0,
+       "comments": []
     }
 #### Update Posts
 - **URL:** `/api/posts/<post_id>/`
@@ -134,6 +136,8 @@ To authenticate and obtain a JWT token, you can follow these steps:
         "author": "1",
         "published_date": "2024-04-14T04:42:03.584415Z",
         "likes": 0"
+        "comments": []
+        
     }
 #### Deleting a Post
 - **URL:** `/api/posts/<post_id>/`
