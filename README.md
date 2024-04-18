@@ -53,12 +53,33 @@ To authenticate and obtain a JWT token, you can follow these steps:
 **Output:**
 
     {
-          "id": 1,
-          "title": "First Post",
-          "content": "Content of the first post",
-          "author": "1",
-          "published_date": "2024-04-14T04:42:03.584415Z",
-      }
+            "title": "test1",
+            "content": "testcontent",
+            "author": 2,
+            "published_date": "2024-04-15T15:47:35.208689Z",
+            "likes": 0,
+            "comments": [
+                {
+                    "id": 1,
+                    "text": "new comment",
+                    "created_date": "2024-04-15T15:48:43.189958Z",
+                    "post": 1,
+                    "author": 2
+                },
+                {
+                    "id": 5,
+                    "text": "new comment2",
+                    "created_date": "2024-04-15T15:49:03.912435Z",
+                    "post": 1,
+                    "author": 2
+                },
+                {
+                    "id": 6,
+                    "text": "new comment3",
+                    "created_date": "2024-04-15T15:49:08.439367Z",
+                    "post": 1,
+                    "author": 2
+                }
 #### Create Posts
 - **URL:** `/api/posts/`
 - **Method:** `POST`
